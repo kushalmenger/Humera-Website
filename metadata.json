@@ -1,0 +1,6 @@
+{
+  "name": "Mari Boutique Salon",
+  "description": "Premium luxury website for Mari Boutique Salon offering bespoke hair styling, bridal makeup, skincare, and an exclusive fashion boutique collection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

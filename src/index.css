@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-display: "Cinzel", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --color-gold-100: #F9F3E5;
+  --color-gold-200: #F3E5C9;
+  --color-gold-300: #E6CE9B;
+  --color-gold-400: #D4AF37;
+  --color-gold-500: #B79222;
+  --color-gold-600: #937316;
+
+  --color-luxury-black: #121212;
+  --color-luxury-neutral: #1C1C1C;
+  --color-luxury-charcoal: #2A2A2A;
+  --color-luxury-ivory: #F8F5F0;
+  --color-luxury-beige: #E8DCCB;
+  --color-luxury-cream: #FAF9F6;
+}
+
+/* Custom scrollbar to match the high-end mood */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-luxury-ivory);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-luxury-beige);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-400);
+}
+
+/* High-end decorative lines and styles */
+.serif-heading {
+  font-family: var(--font-serif);
+}
+
+.display-heading {
+  font-family: var(--font-display);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-luxury-ivory text-luxury-neutral font-sans antialiased selection:bg-gold-400 selection:text-white;
+}
+
+/* Artistic Flair Theme Accents */
+.artistic-border {
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.artistic-initial {
+  color: #E8DCCB;
+  font-family: var(--font-serif);
+}
+
+.artistic-btn-primary {
+  @apply bg-luxury-neutral text-white text-[11px] uppercase tracking-[0.2em] hover:bg-gold-400 hover:text-luxury-neutral transition-colors duration-300;
+}
+
+.artistic-btn-secondary {
+  @apply border border-luxury-neutral text-luxury-neutral text-[11px] uppercase tracking-[0.2em] hover:border-gold-400 hover:text-gold-400 transition-colors duration-300;
+}
+
+/* Premium Animations helper classes */
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #D4AF37 0%, #AA8220 100%);
+}
+
+.gold-text-shimmer {
+  background: linear-gradient(to right, #AA8220, #D4AF37, #F3E5C9, #AA8220);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 6s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
